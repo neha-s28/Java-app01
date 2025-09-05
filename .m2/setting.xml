@@ -3,9 +3,9 @@
 
 - name: Configure JFrog CLI
   env:
-    JFROG_URL: ${{ secrets.https://nehap.jfrog.io }}
-    JFROG_USERNAME: ${{ secrets.neha_parashar@persistent.com }}
-    JFROG_API_Token: ${{ secrets.eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyMDI1LTA5LTAxVDA2LTUxLTAxLTU5NC1iYXRva2VuLXl3OWN0dmEzIiwiaXNzIjoic3RvcmUiLCJzdWIiOiJNeUpGcm9nL25laGFfcGFyYXNoYXJAcGVyc2lzdGVudC5jb20iLCJhdWQiOiJqZmJvQCoiLCJzY3AiOiJzdWJzY3JpcHRpb246NDE1MTc3ODYyOmFwaSIsImlhdCI6MTc1NjcwOTQ2MSwiZXhwIjoxNzg4MjQ1NDYxLCJleHQiOiJ7XCJyZWZyZXNoYWJsZVwiOnRydWUsXCJyZXZvY2FibGVcIjp0cnVlfSJ9.ZOk-zrcAFYWVqY7pfucsE4Kd2AnSMaGMbAhSCYOmz5ZdCzlJxxYq4aiSVFWbdzffuY5ovBatBEjG6a5WH4tVutbp50ZNk1gMBH-z7vQ7YGUiTWJULszssXLJyarb6_c8vWW38Zats2H2L_kfqxxqUC7blQqrRXZHF1J96XmoH1zILHIbmJ3prBZBgLXe-Hkpu_6Dl7KQHtOGM1tY9Jek2YW65H_sPQvOTyrjkFXpUVI3TMEnDMj3Y7kZaC5aDpIsyKVd1e3EtAlVS7lOVrKpEhIzqK6pimJ4TeNrJwg8B8CYQI0IxHo1X_oxMlsNO4xff29lmsGV7UEwVcX_8G4k6A }}
+    JFROG_URL: ${{ secrets.JFROG_URL }}
+    JFROG_USERNAME: ${{ secrets.JFROG_USERNAME }}
+    JFROG_API_Token: ${{ secrets.JFROG_API_KEY }}
   run: |
     jfrog config add my-config --url=${JFROG_URL} --user=${JFROG_USERNAME} --apikey=${JFROG_API_KEY} --interactive=false
 
